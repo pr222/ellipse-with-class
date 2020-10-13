@@ -9,4 +9,3 @@ import { Ellipse } from './Ellipse.js'
 const ellipse = new Ellipse(42.7, 13.8)
 
 console.log(ellipse.toString())
-// Ellipsen du skapar ska initialt ha värdet `42,7` för halva storaxelns längd (`a`), och värdet `13,8` för halva lillaxelns längd (`b`). En textbeskrivning av objektet ska presenteras

@@ -15,41 +15,46 @@
  * @class Ellipse
  */
 export class Ellipse {
-/* TODO: ADD Block comment */
+/**
+ * Constructor taking two parameters.
+ *
+ * @param {number} a - The semi-major axis of the ellipse.
+ * @param {number} b - The semi-minor axis of the ellipse.
+ */
   constructor (a, b) {
     this.a = a
     this.b = b
   }
 
-//   get a () {
-//     return this.a
-//   }
-
-//   get b () {
-//     return this.b
-//   }
-
+  /**
+   * Get the area of the ellipse.
+   *
+   * @readonly
+   * @memberof Ellipse
+   * @returns {number} - The area of the ellipse.
+   */
   get area () {
     return Math.PI * this.a * this.b
   }
 
-//   calcArea () { // Calculate the area using a and b
-//     return Math.PI * this.a * this.b
-//   }
-
-//   get circumference () {
-//     return this._calcCircumference()
-//   }
-
+  /**
+   * Get the circumference of the ellipse.
+   *
+   * @readonly
+   * @memberof Ellipse
+   * @returns {number} - The circumference of the ellipse.
+   */
   get circumference () { // Calculate the circumference using a and b
     return Math.PI * Math.sqrt(2 * this.a * this.a + 2 * this.b * this.b)
   }
 
-  toString () { // Method that returns the representated object as a string.
+  /**
+   * Representation of the object.
+   *
+   * @memberof Ellipse
+   * @returns {string} - Returns the representated object as a string.
+   */
+  toString () {
     return `a: ${this.a}, b: ${this.b}, area: ${this.area.toFixed(1)}, circumference: ${this.circumference.toFixed(1)}`
   }
-
-  // Lägg till toString-metod
-  // Objektet som string
-  // Area och omkrets avrundas till en decimal
 }
