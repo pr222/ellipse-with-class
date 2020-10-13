@@ -1,9 +1,16 @@
-class Ellipse {
+export class Ellipse {
   constructor (a, b, area, circumference) {
     this.a = a
     this.b = b
   }
-  // Börja med egenskaper:
+
+  get a () {
+    return this.a
+  }
+
+  get b () {
+    return this.b
+  }
 
   get area () {
     return this.calcArea()
@@ -19,6 +26,14 @@ class Ellipse {
 
   calcCircumference () {
     return Math.PI * Math.sqrt(2 * this.a * this.a * 2 * this.b * this.b)
+  }
+
+  set a (value) {
+    this.a = value
+  }
+
+  set b (value) {
+    this.b = value
   }
 
   // Lägg till toString-metod
