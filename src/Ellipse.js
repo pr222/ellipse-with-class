@@ -1,7 +1,7 @@
 /**
- * Ellipse class.
+ * Ellipse module.
  *
- * @constructs src/Ellipse
+ * @module src/Ellipse
  * @author Pauliina Raitaniemi <pr222ja@student.lnu.se>
  * @version 1.0.0
  */
@@ -9,48 +9,44 @@
 // ------------------------------------------------------------------------------
 //  Public interface
 // ------------------------------------------------------------------------------
+/**
+ * An representation of an ellipse
+ *
+ * @class Ellipse
+ */
 export class Ellipse {
-  constructor (a, b, area, circumference) {
+/* TODO: ADD Block comment */
+  constructor (a, b) {
     this.a = a
     this.b = b
-    this._area = area
-    this._circumference = circumference
   }
 
-  get a () {
-    return this.a
-  }
+//   get a () {
+//     return this.a
+//   }
 
-  get b () {
-    return this.b
-  }
+//   get b () {
+//     return this.b
+//   }
 
   get area () {
-    return this._calcArea()
-  }
-
-  calcArea () { // Calculate the area using a and b
     return Math.PI * this.a * this.b
   }
 
-  get circumference () {
-    return this._calcCircumference()
-  }
+//   calcArea () { // Calculate the area using a and b
+//     return Math.PI * this.a * this.b
+//   }
 
-  calcCircumference () { // Calculate the circumference using a and b
-    return Math.PI * Math.sqrt(2 * this.a * this.a * 2 * this.b * this.b)
-  }
+//   get circumference () {
+//     return this._calcCircumference()
+//   }
 
-  set a (value) {
-    this.a = value
-  }
-
-  set b (value) {
-    this.b = value
+  get circumference () { // Calculate the circumference using a and b
+    return Math.PI * Math.sqrt(2 * this.a * this.a + 2 * this.b * this.b)
   }
 
   toString () { // Method that returns the representated object as a string.
-    return `a: ${this.a}, b: ${this.b}, area: ${this.area.toFixed(2)}, circumference: ${this.circumference.toFixed(2)}`
+    return `a: ${this.a}, b: ${this.b}, area: ${this.area.toFixed(1)}, circumference: ${this.circumference.toFixed(1)}`
   }
 
   // Lägg till toString-metod
